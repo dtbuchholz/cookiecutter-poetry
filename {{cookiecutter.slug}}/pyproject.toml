@@ -1,9 +1,8 @@
 [tool.poetry]
-name = "{{ cookiecutter.hyphenated }}"
-version = "0.0.0"
-requires-python = ">=3.11"
+name = "{{ cookiecutter.slug }}"
+version = "0.0.1"
 description = "{{ cookiecutter.description or "" }}"
-authors = [{name = "{{ cookiecutter.author_name }}"}]
+authors = ["{{ cookiecutter.author_name }}"]
 license = "Apache-2.0"
 classifiers = [
     "License :: OSI Approved :: Apache Software License"
@@ -51,7 +50,7 @@ use_parentheses = true
 line_length = 88
 
 [tool.mypy]
-files = ["{{ cookiecutter.hyphenated }}", "test"]
+files = ["src/{{ cookiecutter.slug }}", "test"]
 ignore_missing_imports = false
 
 [tool.pytest.ini_options]

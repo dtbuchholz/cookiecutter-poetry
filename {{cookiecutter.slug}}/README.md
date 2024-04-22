@@ -1,7 +1,7 @@
-# {{ cookiecutter.hyphenated }}
+# {{ cookiecutter.project_name }}
 
-[![PyPI](https://img.shields.io/pypi/v/{{ cookiecutter.hyphenated }}.svg)](https://pypi.org/project/{{ cookiecutter.hyphenated }}/){% if cookiecutter.github_username %}
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.hyphenated }}/blob/main/LICENSE){% endif %}
+[![PyPI](https://img.shields.io/pypi/v/{{ cookiecutter.slug }}.svg)](https://pypi.org/project/{{ cookiecutter.slug }}/){% if cookiecutter.github_username %}
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.slug }}/blob/main/LICENSE){% endif %}
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
 
 > {{ cookiecutter.description }}
@@ -15,19 +15,19 @@ Background information goes here.
 You can install with `pip`:
 
 ```sh
-pip install {{ cookiecutter.hyphenated }}
+pip install {{ cookiecutter.slug }}
 ```
 
 With `poetry`:
 
 ```sh
-poetry add {{ cookiecutter.hyphenated }}
+poetry add {{ cookiecutter.slug }}
 ```
 
 Or with `pipenv`:
 
 ```sh
-pipenv install {{ cookiecutter.hyphenated }}
+pipenv install {{ cookiecutter.slug }}
 ```
 
 ## Usage

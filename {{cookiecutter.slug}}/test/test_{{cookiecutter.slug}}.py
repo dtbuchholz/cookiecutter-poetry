@@ -1,4 +1,4 @@
-from {{ cookiecutter.underscored }} import example_function
+from {{ cookiecutter.slug }} import example_function
 
 
 def test_example_function():

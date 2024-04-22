@@ -1,8 +1,7 @@
 {
   "project_name": "",
   "description": "",
-  "hyphenated": "{{ '-'.join(cookiecutter['project_name'].lower().split()).replace('_', '-') }}",
-  "underscored": "{{ cookiecutter.hyphenated.replace('-', '_') }}",
+  "slug": "{{ '_'.join(cookiecutter['project_name'].lower().split()) }}",
   "github_username": "",
   "author_name": ""
 }
