@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "Poetry Cookiecutter Template"
+description = "test"
+authors = ["Dan Buchholz"]
+license = "Apache-2.0"
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+pre-commit = "^3.7.0"
+poethepoet = "^0.25.0"
+
+[tool.poe.tasks]
+pre-commit-install = "pre-commit install -t pre-commit"
+pre-push-install = "pre-commit install -t pre-push"
+pre-commit = ["pre-commit-install", "pre-push-install"]
+black = "black {{cookiecutter.slug}} --exclude {{cookiecutter.slug}}/test"
+lint = ["black"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,15 +1,15 @@
-* {{ cookiecutter.project_name }} version:
-* Python version:
-* Operating System:
-
-### Description
+## Summary
 
 Describe what you were trying to get done.
-Tell us what happened, what went wrong, and what you expected to happen.
 
-### What I Did
+- {{ cookiecutter.project_name }} version used:
+- Python version:
+- Operating system:
+
+## Details
+
+Describe what happened, what went wrong, and what you expected to happen.
 
 ```
-Paste the command(s) you ran and the output.
-If there was a crash, please include the traceback here.
+Paste relevant command(s) or snippets.
 ```

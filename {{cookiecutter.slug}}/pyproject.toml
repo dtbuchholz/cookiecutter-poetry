@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "{{ cookiecutter.slug }}"
+name = "Cookiecutter Poetry"
 version = "0.0.1"
-description = "{{ cookiecutter.description or "" }}"
-authors = ["{{ cookiecutter.author_name }}"]
+description = "Python Cookiecutter template with Flake8, Black, isort, Mypy, pre-commit hooks, Poetry, & Poe"
+authors = ["Dan Buchholz"]
 license = "Apache-2.0"
 classifiers = [
     "License :: OSI Approved :: Apache Software License"
@@ -18,23 +18,17 @@ flake8 = "^7.0.0"
 isort = "^5.13.2"
 mypy = "^1.9.0"
 pre-commit = "^3.7.0"
-pytest = "^8.1.1"
-pytest-cov = "^5.0.0"
 poethepoet = "^0.25.0"
 
 [tool.poe.tasks]
 pre-commit-install = "pre-commit install -t pre-commit"
 pre-push-install = "pre-commit install -t pre-push"
 pre-commit = ["pre-commit-install", "pre-push-install"]
-test = "pytest"
-coverage = "pytest --cov --cov-fail-under=90"
 isort = "isort --atomic ."
 black = "black ."
 flake8 = "flake8"
 mypy = "mypy"
 lint = ["black", "isort", "flake8", "mypy"]
-build = "poetry build"
-publish = "poetry publish --build"
 
 [tool.flake8]
 ignore = "E203, E266, E501, W503"
@@ -48,13 +42,14 @@ include_trailing_comma = true
 force_grid_wrap = 0
 use_parentheses = true
 line_length = 88
+profile = "black"
 
 [tool.mypy]
-files = ["src/{{ cookiecutter.slug }}", "test"]
+files = ["{{ cookiecutter.slug }}/src/{{ cookiecutter.slug }}", "{{ cookiecutter.slug }}/test"]
 ignore_missing_imports = false
 
 [tool.pytest.ini_options]
-testpaths = ["test/"]
+testpaths = ["{{ cookiecutter.slug }}/test/"]
 
 [build-system]
 requires = ["poetry-core"]

@@ -1,14 +1,15 @@
-* Date you used Cookiecutter PyPackage:
-* Cookiecutter version used, if any:
-* Python version, if any:
-* Operating System:
+## Summary
 
-### Description
+Describe what you were trying to get done.
 
-Describe what you were trying to get done. Tell us what happened, what went wrong, and what you expected to happen.
+- Package version used:
+- Python version:
+- Operating System:
 
-### What I Did
+## Details
+
+Describe what happened, what went wrong, and what you expected to happen.
 
 ```
-Paste the command(s) you ran and the output.
+Paste relevant command(s) or snippets.
 ```
