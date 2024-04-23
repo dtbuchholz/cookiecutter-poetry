@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Poetry Cookiecutter Template"
-description = "test"
+description = "Python Cookiecutter template with Flake8, Black, isort, Mypy, pre-commit hooks, Poetry, & Poe"
 authors = ["Dan Buchholz"]
 license = "Apache-2.0"
 classifiers = [
