@@ -56,18 +56,17 @@ poetry run poe lint
 # Run tests
 poetry run poe test
 poetry run poe coverage
-# Or
-poetry run pytest
 
-# Build the package
+# Build the package & publish to PyPI
 poetry build
+poetry poe publish
 ```
 
 ## Contributing
 
 PRs accepted.
 
-This package was created with Cookiecutter and the [sourcery.ai](https://github.com/sourcery-ai/python-best-practices-cookiecutter) project template. Small note: If editing the README, please conform to the
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [`poetry` project template](https://github.com/dtbuchholz/cookiecutter-poetry). Small note: If editing the `README`, please conform to the
 [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
 
 ## License
