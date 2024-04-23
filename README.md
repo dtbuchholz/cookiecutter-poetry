@@ -1,6 +1,6 @@
-## Poetry Python Cookiecutter
+# Poetry Python Cookiecutter
 
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.slug }}/blob/main/LICENSE){% endif %}
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/dtbuchholz/cookiecutter-poetry/blob/main/LICENSE)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg)](https://github.com/RichardLitt/standard-readme)
 
 > A minimal Cookiecutter template for creating Python packages with Poetry + common tools
