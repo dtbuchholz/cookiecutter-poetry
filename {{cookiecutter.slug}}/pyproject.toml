@@ -16,12 +16,12 @@ packages = [
 python = "^3.11"
 
 [tool.poetry.group.dev.dependencies]
-black = "^24.3.0"
+black = "^24.4.0"
 flake8 = "^7.0.0"
 isort = "^5.13.2"
 mypy = "^1.9.0"
 pre-commit = "^3.7.0"
-poethepoet = "^0.25.0"
+poethepoet = "^0.25.1"
 pytest = "^8.1.1"
 pytest-cov = "^5.0.0"
 
@@ -29,6 +29,8 @@ pytest-cov = "^5.0.0"
 pre-commit-install = "pre-commit install -t pre-commit"
 pre-push-install = "pre-commit install -t pre-push"
 pre-commit = ["pre-commit-install", "pre-push-install"]
+git-init = "git init"
+init = ["git-init", "pre-commit"]
 isort = "isort --atomic ."
 black = "black ."
 flake8 = "flake8"

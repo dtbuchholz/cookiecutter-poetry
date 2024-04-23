@@ -44,10 +44,10 @@ Once that's set up, you can install the project dependencies and run various tas
 # Install dependencies
 poetry install
 
-# Make sure git is initialized, if not already
+# Make sure git is initialized and set up pre-commit and pre-push hooks
+poetry run poe init
+# Or, run this separately
 git init
-
-# Setup pre-commit and pre-push hooks
 poetry run poe pre-commit
 
 # Run linters
