@@ -8,7 +8,9 @@ classifiers = [
     "License :: OSI Approved :: Apache Software License"
 ]
 readme = "README.md"
-packages = [{include = "src/{{ cookiecutter.slug }}"}]
+packages = [
+    { include = "{{ cookiecutter.slug }}", from = "src" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -33,7 +35,7 @@ flake8 = "flake8"
 mypy = "mypy"
 lint = ["black", "isort", "flake8", "mypy"]
 test = "pytest"
-coverage = "pytest --cov --cov-fail-under=90"
+coverage = "pytest --cov --cov-fail-under=90 --cov-report term"
 build = "poetry build"
 publish = "poetry publish --build"
 
@@ -52,11 +54,12 @@ line_length = 88
 profile = "black"
 
 [tool.mypy]
-files = ["src/{{ cookiecutter.slug }}", "test"]
+files = ["src"]
 ignore_missing_imports = false
 
 [tool.pytest.ini_options]
-testpaths = ["test/"]
+pythonpath = ["src"]
+testpaths = ["test"]
 
 [build-system]
 requires = ["poetry-core"]

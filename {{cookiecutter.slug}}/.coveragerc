@@ -1,20 +1,22 @@
+# type: ignore
 [run]
-source = tableland
-omit = tableland/__main__.py
+source = src/{{cookiecutter.slug}}
+omit = 
+    test/*,
+    src/{{cookiecutter.slug}}/__main__.py
 
 [report]
 exclude_lines =
-    # Have to re-enable the standard pragma
     pragma: no cover
 
-    # Don't complain about missing debug-only code:
+    # Ignore debug-only code
     def __repr__
     if self\.debug
 
-    # Don't complain if tests don't hit defensive assertion code:
+    # Ignore defensive programming assertions
     raise AssertionError
     raise NotImplementedError
 
-    # Don't complain if non-runnable code isn't run:
+    # Ignore non-executable code
     if 0:
-    if __name__ == .__main__.:
+    if __name__ == '__main__':
