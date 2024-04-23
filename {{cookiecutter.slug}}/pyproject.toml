@@ -1,13 +1,14 @@
 [tool.poetry]
-name = "Cookiecutter Poetry"
+name = "{{ cookiecutter.project_name }}"
 version = "0.0.1"
-description = "Python Cookiecutter template with Flake8, Black, isort, Mypy, pre-commit hooks, Poetry, & Poe"
-authors = ["Dan Buchholz"]
+description = "{{ cookiecutter.description }}"
+authors = ["{{ cookiecutter.author_name }}"]
 license = "Apache-2.0"
 classifiers = [
     "License :: OSI Approved :: Apache Software License"
 ]
 readme = "README.md"
+packages = [{include = "src/{{ cookiecutter.slug }}"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -45,11 +46,11 @@ line_length = 88
 profile = "black"
 
 [tool.mypy]
-files = ["{{ cookiecutter.slug }}/src/{{ cookiecutter.slug }}", "{{ cookiecutter.slug }}/test"]
+files = ["{{ cookiecutter.slug }}/src/{{ cookiecutter.slug }}", "test"]
 ignore_missing_imports = false
 
 [tool.pytest.ini_options]
-testpaths = ["{{ cookiecutter.slug }}/test/"]
+testpaths = ["test/"]
 
 [build-system]
 requires = ["poetry-core"]
