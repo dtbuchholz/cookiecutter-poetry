@@ -1,7 +1,7 @@
 {
-  "project_name": "",
-  "description": "",
-  "slug": "{{ '_'.join(cookiecutter['project_name'].lower().split()) }}",
-  "github_username": "",
-  "author_name": ""
+    "project_name": "My Project",
+    "description": "A project description",
+    "slug": "{{ '_'.join(cookiecutter['project_name'].lower().split()) }}",
+    "github_username": "dtbuchholz",
+    "author_name": "Dan Buchholz"
 }
